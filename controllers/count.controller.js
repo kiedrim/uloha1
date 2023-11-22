@@ -5,9 +5,9 @@ const redisClient = require('../config/dbconfig')
     try {
         const count = await redisClient.get('count');
         res.send(count)
-        response.statusCode = 200;
+        res.statusCode = 200;
       } catch (err) {
-        response.statusCode= 500;
+        res.statusCode= 500;
         res.err = err;
       } 
 }

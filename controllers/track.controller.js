@@ -1,7 +1,27 @@
 const fs = require("fs");
 const redisClient = require('../config/dbconfig')
 
+// validation scheme
+const schema = Joi.object({
+  userId: Joi.number().required(),
+  count: Joi.date().required()
+});
+ 
+function validate(req, res, next) {
+  
+  const {error} = schema.validate(req.body);
+  
+  if (error) {
+    return res.status(400).send('Invalid request data'); 
+  } else {
+    next();
+  }
+
+}
+
+
 const trackData = (req, res) => {
+  //schema.validate(req.body);
     const data = req.body;
     try {
 
@@ -18,10 +38,13 @@ const trackData = (req, res) => {
 
 };
 
-function saveDataToFile(data) {
-  
-  fs.appendFile('data.txt', data + "\n", err => {
-    if (err) return res.status(500).send("failed to save data" + err);})
+async function saveDataToFile(data) {
+  try {
+    fs.appendFile('data.txt', data + "\n");
+  }
+     catch (error) {
+    return res.status(500).send("failed to save data" + error);
+  }
 
 }
 
