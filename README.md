@@ -22,11 +22,14 @@ Before running the application, make sure you have the following installed:
    ```
 
 2. Install dependencies:
+
+   ```bash
    npm init
    npm install express
    npm install redis
    npm install jest
    npm install supertest
+   ```
 
 3. Configure the application:
    Copy the config/config.js.example file to config/config.js and update the configuration as needed.
@@ -39,14 +42,16 @@ Before running the application, make sure you have the following installed:
 
 ## Running the Application
 
-Run the following command to start the application:
-
-npm start
-The application will start on the configured port, and you should see a message indicating that the app is listening on that port.
+    Run the following command to start the application:
+    ```bash
+    npm start
+    ```
+    The application will start on the configured port, and you should see a message indicating that the app is listening on that port.
 
 ## Routes
 
 /track: Provides routes for tracking operations.
+
 /count: Provides routes for counting operations.
 
 ## Redis Connection
