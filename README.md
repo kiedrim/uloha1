@@ -22,28 +22,27 @@ Before running the application, make sure you have the following installed:
    Install dependencies:
    ```
 
-bash
-Copy code
-npm install
-Configure the application:
+2. Copy code:
+   npm install
 
-Copy the config/config.js.example file to config/config.js and update the configuration as needed.
+3. Configure the application:
+   Copy the config/config.js.example file to config/config.js and update the configuration as needed.
 
-bash
-Copy code
 cp config/config.js.example config/config.js
 Update the values in config/config.js with your Redis configuration.
 
-Running the Application
+## Running the Application
+
 Run the following command to start the application:
 
-bash
-Copy code
 npm start
 The application will start on the configured port, and you should see a message indicating that the app is listening on that port.
 
-Routes
+## Routes
+
 /track: Provides routes for tracking operations.
 /count: Provides routes for counting operations.
-Redis Connection
+
+## Redis Connection
+
 The application connects to a Redis database for data storage. Ensure that your Redis server is running and accessible.
