@@ -44,9 +44,7 @@ Before running the application, make sure you have the following installed:
 
     Run the following command to start the application:
 
-    ```bash
     npm start
-    ```
 
     The application will start on the configured port, and you should see a message indicating that the app is listening on that port.
 
