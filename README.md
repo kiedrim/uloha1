@@ -19,17 +19,23 @@ Before running the application, make sure you have the following installed:
 
    ```bash
    git clone <repository-url>
-   Install dependencies:
    ```
 
-2. Copy code:
-   npm install
+2. Install dependencies:
+   npm init
+   npm install express
+   npm install redis
+   npm install jest
+   npm install supertest
 
 3. Configure the application:
    Copy the config/config.js.example file to config/config.js and update the configuration as needed.
 
-cp config/config.js.example config/config.js
-Update the values in config/config.js with your Redis configuration.
+   ```bash
+   cp config/config.js.example config/config.js
+   ```
+
+   Update the values in config/config.js with your Redis configuration.
 
 ## Running the Application
 
